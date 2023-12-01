@@ -45,6 +45,9 @@ while True:
         #Recorte del recuadro solo con la mano 
         recorte = frame[ymin:ymax, xmin:xmax]  
 
+        #Redimensionar 
+        recorte = cv2.resize(recorte, (640, 640), interpolation = cv2.INTER_CUBIC)
+
         #Extraer resultados del modelo 
         resultados = model.predict(recorte, conf = 0.9)  #Se crea una variable la cual almacena los resultados de las predicciones del modelo
 
