@@ -4,7 +4,7 @@
 #Paso 2 importar librerias
 import cv2
 import mediapipe as mp
-import time  
+
 
 #Se crea una clase
 class detectorManos():
@@ -24,7 +24,7 @@ class detectorManos():
         self.tip = [4, 8, 12, 16, 20]
 
     #Funcion para encontrar manos
-    def encontrarManos(self, frame, dibujar = True): #Se define la funcion con sus parametros. self -> instancia de la clase  / frame -> imagen recibida  / dibujar -> opcion de dibujar los puntos claves
+    def encontrarManos(self, frame, dibujar = False): #Se define la funcion con sus parametros. self -> instancia de la clase  / frame -> imagen recibida  / dibujar -> opcion de dibujar los puntos claves
         imgcolor = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) #Conversion de color de la imagen leida. Cuando opencv lee una imagen la convierte a BGR. Mediapipe espera que la imagen esté en RBG, por eso es necesaria la conversion
         self.resultados = self.manos.process(imgcolor) #Realiza la deteccion de manos en la imagen convertida a RBG (imgcolor). La respuesta se guarda en "self.resultados"
         if self.resultados.multi_hand_landmarks: #Verifica si se han detectados manos

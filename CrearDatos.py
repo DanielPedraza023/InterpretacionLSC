@@ -59,7 +59,7 @@ while True:
         recorte = frame[ymin:ymax, xmin:xmax]
         
         #Guardar las imagenes
-        cv2.imwrite(carpeta + "/ESPACIO_INVESTIGADORJIMMY_{}.jpg".format(cont), recorte)
+        #cv2.imwrite(carpeta + "/ESPACIO_INVESTIGADORJIMMY_{}.jpg".format(cont), recorte)
 
         #Aumentar contador
         cont += 1
@@ -68,6 +68,8 @@ while True:
 
         cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), [0, 255, 0], 2) #Recuadro Verde
 
+    if mano > 1:
+        cv2.putText(frame, "Se detecta mas de una mano", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
     
     #Mostrar FPS
@@ -75,7 +77,7 @@ while True:
 
     #Leer el teclado 
     t = cv2.waitKey(1)
-    if t == 27 or cont == 120:
+    if t == 27: #or cont == 120:
         break
 cap.release()
 cv2.destroyAllWindows()
