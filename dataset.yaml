@@ -1,0 +1,5 @@
+train: D:\Datos\Desktop\CODIGOS\TESIS\DATASET\train/
+val: D:\Datos\Desktop\CODIGOS\TESIS\DATASET\val/
+test:
+nc: 27
+names: ["F", "A", "Z", "Q", "D", "Y", "O", "J", "U", "R", "N", "X", "C", "I", "ESPACIO", "W", "H", "T", "G", "M", "E", "P", "L", "V", "B", "K", "S"]

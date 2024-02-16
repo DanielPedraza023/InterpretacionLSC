@@ -1,0 +1,3 @@
+train1 --> se usó con el comando labelme2yolo
+
+datosjoin --> carpeta con todas las imagenes juntas en train y val

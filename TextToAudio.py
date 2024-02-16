@@ -6,5 +6,5 @@ def reproducir_audio(palabra):
     engine.runAndWait()
 
 
-detector = "HOLA"
-reproducir_audio("La palabra deletreada fue: " +str(detector))
+#detector = "HOLA"
+#reproducir_audio("La palabra deletreada fue: ", palabra)
